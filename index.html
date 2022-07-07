@@ -50,7 +50,7 @@
         <section class="hero overlay">
             <div class="container">
                 <h1 class="hero-title centered">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="button">Заказать услугу</button>
+                <button type="button" class="button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
         <section class="section">
@@ -101,29 +101,23 @@
             <div class="container">
                 <h2 class="section-title centered">Чем мы занимаемся</h2>
                 <ul class="pic-list">
-                    <li>
-                        <div class="pic-item">
-                            <img src="./images/web-development(1).jpg" alt="Разработка приложений" width="370">
+                    <li class="pic-item">
+                        <img src="./images/web-development(1).jpg" alt="Разработка приложений" width="370">
                             <div class="pic-bgr">
                                 <p class="pic-desc">Десктопные приложения</p>
-                            </div>                            
-                        </div>                        
+                            </div>                        
                     </li>
-                    <li>
-                        <div class="pic-item">
-                            <img src="./images/apps(1).jpg" alt="Разработка мобильных приложений" width="370">
+                    <li class="pic-item">
+                        <img src="./images/apps(1).jpg" alt="Разработка мобильных приложений" width="370">
                             <div class="pic-bgr">
                                 <p class="pic-desc">Мобильные приложения</p>
-                            </div>
-                        </div>
+                            </div>                        
                     </li>
-                    <li>
-                        <div class="pic-item">
-                            <img src="./images/design(1).jpg" alt="Разработка дизайна сайтов" width="370">
+                    <li class="pic-item">
+                        <img src="./images/design(1).jpg" alt="Разработка дизайна сайтов" width="370">
                             <div class="pic-bgr">
                                 <p class="pic-desc">Дизайнерские решения</p>
                             </div>
-                        </div>
                     </li>
                 </ul>
             </div>
@@ -376,6 +370,17 @@
             </div>                                             
         </div>
     </footer>
+    <!-- Modal -->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-btn-close" data-modal-close>
+                <svg width="30" height="30">
+                    <use href="./images/icons-sprite5.svg#close"></use>
+                </svg>    
+            </button>    
+        </div>    
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
 
