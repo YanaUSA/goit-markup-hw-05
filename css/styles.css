@@ -96,6 +96,7 @@ header {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 .nav-contacts .list a {
   display: flex;
@@ -205,10 +206,11 @@ header {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
 .button:focus {
-background-color: #188CE8;
+  background-color: #188CE8;
 }
 
 .feature-list {
@@ -333,6 +335,7 @@ background-color: #188CE8;
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  transition: background-color fill 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-item:hover,
 .social-list-item > a:focus {
@@ -529,9 +532,9 @@ color: var(--accent-color);
 }
 .portfolio-item {
   width: calc((100% - 60px) / 3);
-  background: #FFFFFF;
   margin-right: 30px;
   margin-bottom: 30px; 
+  background: #FFFFFF;
 }
 .portfolio-item:nth-child(3n) {
   margin-right: 0;
@@ -541,11 +544,34 @@ color: var(--accent-color);
 }
 .portfolio-link {
   display: block;
-}
-.portfolio-link:hover,
-.portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.portfolio-link:hover .desc-overlay,
+.portfolio-link:focus .desc-overlay {
+ transform: translateY(0);
+}
+.portfolio-item-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.desc-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  
+  font-style: inherit;
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--wht-text-color);
+  background: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .card-description {
   padding: 20px 24px;
   border-right: 1px solid #EEEEEE;
